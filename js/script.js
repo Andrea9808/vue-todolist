@@ -52,7 +52,14 @@ createApp({
             this.todos.splice(indice,1);
         },
 
-        
+        //aggiunta nuovi task
+        addTask(){
+            this.todos.unshift({
+                text:this.added,
+                done:false
+            }),
+            this.added = ""
+        },
         
     }
 
