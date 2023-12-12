@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>To do list</title>
+</head>
+<body>
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    
+    <div id="app" class="container">
+
+        <div class="logo">
+
+        </div>
+
+        <!-- input e bottone -->
+        <div class="inpbut">
+            <input type="text" placeholder="Inseriscine altri" v-model ="added">
+            <button @click="addTask">Aggiungi</button>  
+        </div>
+
+        <!-- output -->
+
+        <div class="task-container">
+            <ul>
+                <li v-for="(task,i) in todos" :key="i" :class="task.done === true ? 'through' : ''" > 
+                    {{ task.text }}
+                    <i class="fa-solid fa-x" @click ="removeTask(i)"></i>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
