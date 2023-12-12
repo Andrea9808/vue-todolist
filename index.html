@@ -18,7 +18,7 @@
 
         <!-- input e bottone -->
         <div class="inpbut">
-            <input type="text" placeholder="Inseriscine altri" v-model ="added">
+            <input type="text" placeholder="Inseriscine altri" v-model ="added" @keyup.enter = "addTask">
             <button @click="addTask">Aggiungi</button>  
         </div>
 
