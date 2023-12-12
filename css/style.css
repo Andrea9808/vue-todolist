@@ -1,9 +1,85 @@
-
-
-li.through{
-    text-decoration: line-through;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-i{
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(../to-do-list.jpg);
+    background-color: #f8f8f8;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.container {
+    width: 40%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.inpbut {
+    justify-content: center;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 250px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: green;
+    color: white;
+    border-radius: 4px;
     cursor: pointer;
 }
+
+button:hover {
+    background-color: #45a049;
+}
+
+.task-container {
+    list-style: none;
+}
+
+.task-container li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid rgb(206, 196, 196);
+}
+
+.through {
+    text-decoration: line-through;
+    color: gray;
+}
+
+i {
+    cursor: pointer;
+}
+
+li{
+    cursor: pointer;
+}
+
+li:hover{
+    background-color: #ece7e7;
+    transition: background-color ease-in-out 0.2s;
+}
+

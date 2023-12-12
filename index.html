@@ -13,7 +13,7 @@
     <div id="app" class="container">
 
         <div class="logo">
-
+            <h1>TODO LIST</h1>
         </div>
 
         <!-- input e bottone -->
@@ -26,7 +26,7 @@
 
         <div class="task-container">
             <ul>
-                <li v-for="(task,i) in todos" :key="i" :class="task.done === true ? 'through' : ''" > 
+                <li v-for="(task,i) in todos" :key="i" :class="task.done === true ? 'through' : ''" @click="check(i)"> 
                     {{ task.text }}
                     <i class="fa-solid fa-x" @click ="removeTask(i)"></i>
                 </li>

@@ -60,6 +60,15 @@ createApp({
             }),
             this.added = ""
         },
+
+        //al click del li
+        check(indice){
+           if(this.todos[indice].done === false){
+                this.todos[indice].done = true;
+            } else{
+                this.todos[indice].done = false;
+            }
+        }
         
     }
 
